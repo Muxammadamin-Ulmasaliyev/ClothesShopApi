@@ -1,4 +1,9 @@
-﻿namespace ClothesShopApi.Extensions
+﻿using ClothesShopApi.Services.IServices;
+using ClothesShopApi.Services;
+using ClothesShopDataAccess.IRepositories;
+using ClothesShopDataAccess.Repositories;
+
+namespace ClothesShopApi.Extensions
 {
 	public static class ServiceExtensions
 	{
@@ -12,5 +17,17 @@
 					.AllowAnyHeader());
 			});
 		}
+
+		public static void ConfigureCustomServices(this IServiceCollection services)
+		{
+			services.AddScoped<IProductRepository, ProductRepository>();
+			services.AddScoped<IProductService, ProductService>();
+
+			services.AddScoped<ICategoryRepository, CategoryRepository>();
+			services.AddScoped<ICategoryService, CategoryService>();
+		}
+
+
+
 	}
 }

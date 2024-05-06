@@ -51,6 +51,7 @@ namespace ClothesShopApi.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Create([FromBody] ProductModel model)
 		{
+			//var existingColors = await _colorService.GetAll();
 			var createdProduct = await _productService.Create(model);
 			var routeValues = new { id = createdProduct.Id };
 			return CreatedAtRoute(routeValues, createdProduct);

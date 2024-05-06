@@ -55,6 +55,6 @@ namespace ClothesShopApi.Services
 			var updatedCategory = await _productRepository.Update(id, product);
 			return Mapper.Map(updatedCategory);
 		}
-		
+
 	}
 }

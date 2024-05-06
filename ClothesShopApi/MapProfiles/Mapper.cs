@@ -20,6 +20,8 @@ namespace ClothesShopApi.MapProfiles
 				Gender = product.Gender,
 				//Category = product.Category,
 				CategoryId = product.CategoryId,
+				Color = product.Color,
+				Quantity = product.Quantity,
 			};
 		}
 
@@ -37,6 +39,9 @@ namespace ClothesShopApi.MapProfiles
 				Price = model.Price,
 				Gender = model.Gender,
 				CategoryId = model.CategoryId,
+				Color = model.Color,
+				Quantity = model.Quantity,
+				
 			};
 		}
 
@@ -71,32 +76,7 @@ namespace ClothesShopApi.MapProfiles
 		}
 
 
-		public static ColorModel Map(Color color)
-		{
-			return new ColorModel()
-			{
-				Id = color.Id,
-				NameUZ = color.NameUZ,
-				NameEN = color.NameEN,
-				NameRU = color.NameRU,
-			//	Products = color.Products,
-				ProductColors = color.ProductColors,
-			};
-		}
-
-
-		public static Color Map(ColorModel model)
-		{
-			return new Color()
-			{
-				Id = model.Id,
-				NameUZ = model.NameUZ,
-				NameEN = model.NameEN,
-				NameRU = model.NameRU,
-				//	Products = color.Products,
-				ProductColors = model.ProductColors,
-			};
-		}
+		
 
 
 	}

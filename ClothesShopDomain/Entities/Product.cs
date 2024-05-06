@@ -1,4 +1,6 @@
-﻿namespace ClothesShopDomain.Entities
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
+namespace ClothesShopDomain.Entities
 {
 	public class Product
 	{
@@ -11,18 +13,15 @@
 		public string? DescriptionRU { get; set; }
 		public double Price { get; set; }
 		public bool Gender { get; set; }
+        public string Color { get; set; }
+        public int Quantity { get; set; }
 
 
 
-
-
-		// Relationships 
-		public int CategoryId { get; set; }
+        // Relationships 
+        public int CategoryId { get; set; }
 
 		//public Category Category { get; set; }
-
-		public List<Color> Colors { get; } = [];
-		public List<ProductColor> ProductColors { get; set; } = [];
 
 
 

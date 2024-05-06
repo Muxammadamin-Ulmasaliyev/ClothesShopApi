@@ -13,7 +13,6 @@ namespace ClothesShopDomain
 
 		public DbSet<Product> Products { get; set; }
 		public DbSet<Category> Categories { get; set; }
-		public DbSet<Color> Colors { get; set; }
 
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -27,10 +26,7 @@ namespace ClothesShopDomain
 					v => v.Split(',', StringSplitOptions.RemoveEmptyEntries));*/
 
 
-			modelBuilder.Entity<Product>()
-				.HasMany(e => e.Colors)
-				.WithMany(e => e.Products)
-				.UsingEntity<ProductColor>();
+			
 
 		}
 	}

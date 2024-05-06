@@ -26,19 +26,16 @@ namespace ClothesShopApi
 			builder.Services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
 
 
-			builder.Services.AddScoped<ICategoryService, CategoryService>();
-			builder.Services.AddScoped<IProductService, ProductService>();
-			builder.Services.AddScoped<IColorService, ColorService>();
 
-			builder.Services.AddScoped<IColorRepository, ColorRepository>();
-			builder.Services.AddScoped<IProductRepository, ProductRepository>();
-			builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+			builder.Services.ConfigureCustomServices();
 
 
 			builder.Services.ConfigureCors();
 
 			builder.Host.UseSerilog((context, configuration) =>
 				configuration.ReadFrom.Configuration(context.Configuration));
+
+
 			/*builder.Host.UseSerilog((context, configuration) =>
 					configuration
 					.ReadFrom.Configuration(context.Configuration)
@@ -50,9 +47,9 @@ namespace ClothesShopApi
 			// Configure the HTTP request pipeline.
 			if (app.Environment.IsDevelopment())
 			{
-				app.UseSwagger();
-				app.UseSwaggerUI();
 			}
+			app.UseSwagger();
+			app.UseSwaggerUI();
 
 			app.UseSerilogRequestLogging();
 

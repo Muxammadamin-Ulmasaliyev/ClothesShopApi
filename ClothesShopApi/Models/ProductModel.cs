@@ -13,10 +13,13 @@ namespace ClothesShopApi.Models
 		public string? DescriptionRU { get; set; }
 		public double Price { get; set; }
 		public bool Gender { get; set; }
+		public string Color { get; set; }
+		public int Quantity { get; set; }
 
 
-        // Relationships 
-        public int CategoryId { get; set; }
+
+		// Relationships 
+		public int CategoryId { get; set; }
 
 		public Category? Category { get; set; }
 

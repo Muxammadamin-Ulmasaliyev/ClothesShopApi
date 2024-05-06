@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothesShopDomain", "Clothe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothesShopDataAccess", "ClothesShopDataAccess\ClothesShopDataAccess.csproj", "{A0D6A889-DEB2-40F7-B60A-42F2127732C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothesShopApi.Tests", "ClothesShopApi.Tests\ClothesShopApi.Tests.csproj", "{7925D069-1C48-47F4-B38D-34D13BECF7AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothesShopApi.Tests", "ClothesShopApi.Tests\ClothesShopApi.Tests.csproj", "{7925D069-1C48-47F4-B38D-34D13BECF7AA}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ClothesShopDb", "ClothesShopDb\ClothesShopDb.sqlproj", "{87BFAABA-E91C-4C3E-B0E9-F54867CB7DA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{7925D069-1C48-47F4-B38D-34D13BECF7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7925D069-1C48-47F4-B38D-34D13BECF7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7925D069-1C48-47F4-B38D-34D13BECF7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BFAABA-E91C-4C3E-B0E9-F54867CB7DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BFAABA-E91C-4C3E-B0E9-F54867CB7DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BFAABA-E91C-4C3E-B0E9-F54867CB7DA7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{87BFAABA-E91C-4C3E-B0E9-F54867CB7DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BFAABA-E91C-4C3E-B0E9-F54867CB7DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BFAABA-E91C-4C3E-B0E9-F54867CB7DA7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
