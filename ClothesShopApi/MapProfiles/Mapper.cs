@@ -41,7 +41,7 @@ namespace ClothesShopApi.MapProfiles
 				CategoryId = model.CategoryId,
 				Color = model.Color,
 				Quantity = model.Quantity,
-				
+
 			};
 		}
 
@@ -56,8 +56,8 @@ namespace ClothesShopApi.MapProfiles
 				DescriptionUZ = category.DescriptionUZ,
 				DescriptionEN = category.DescriptionEN,
 				DescriptionRU = category.DescriptionRU,
-				Products = category.Products,
-				ProductsCount = category.Products.Count,
+				Products = category.Products is null ? null : category.Products,
+				ProductsCount = category.Products is null ? 0 : category.Products.Count,
 			};
 		}
 
@@ -76,7 +76,7 @@ namespace ClothesShopApi.MapProfiles
 		}
 
 
-		
+
 
 
 	}
